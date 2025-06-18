@@ -1,0 +1,145 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f0f2f5;
+  padding: 40px 10px;
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+  background: #ffffff;
+  margin: auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.fecha {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+.botones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.producto {
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+  margin-top: 20px;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+}
+
+.producto h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #0077cc;
+  font-size: 16px;
+}
+
+.totales {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.input-simulado {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.simbolo-simulado {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-90%); /* antes estaba en -50% */
+  color: #555;
+  font-weight: 600;
+  pointer-events: none;
+  font-size: 14px;
+  line-height: 1;
+}
+
+
+.input-con-simbolo-real {
+  padding-left: 36px;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  input, button {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .producto h3 {
+    font-size: 16px;
+  }
+}
+
+

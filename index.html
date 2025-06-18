@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro de Venta</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+  <style>
+    @media print {
+      body {
+        background: white;
+      }
+
+      .container {
+        box-shadow: none;
+        border: none;
+      }
+
+      input, button {
+        font-size: 12px;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🧾Bienvenida a tu Registro de Ventas Erika</h1>
+    <p id="fecha" class="fecha"></p>
+
+    <div class="form-group">
+      <label for="cliente">👤 Nombre del Cliente:</label>
+      <input type="text" id="cliente" placeholder="Ingrese el nombre del cliente..." />
+    </div>
+
+    <div id="productos"></div>
+
+    <div class="totales">
+      <div class="form-group">
+        <label>Total Venta (S/):</label>
+        <input type="text" id="totalVenta" readonly />
+      </div>
+      <div class="form-group">
+        <label>Total Ganancia (S/):</label>
+        <input type="text" id="totalGanancia" readonly />
+      </div>
+    </div>
+
+    <div class="botones">
+      <button id="agregarProducto"><i class="fas fa-plus-circle"></i> Agregar otro producto</button>
+      <button onclick="exportarPDF()"><i class="fas fa-file-pdf"></i> Exportar a PDF</button>
+    </div>
+  </div>
+
+  <!-- Librerías PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+
+  <script>
+    document.getElementById("fecha").textContent =
+      "📅 Fecha: " + new Date().toLocaleString();
+  </script>
+</body>
+</html>
+
